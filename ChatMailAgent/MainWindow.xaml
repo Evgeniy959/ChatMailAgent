@@ -1,0 +1,31 @@
+﻿<Window x:Class="ChatMailAgent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatMailAgent"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="417.555" Width="600.392">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <RichTextBox  x:Name="History">
+            <RichTextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE2EFF5" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </RichTextBox.Background>
+        </RichTextBox>
+        <ListBox x:Name="Clients" Grid.Column="1"></ListBox>
+        <TextBox Grid.Row="1" x:Name="Message"></TextBox>
+        <Button Grid.Column="1" Grid.Row="1" Click="Button_Click">Отправить</Button>
+    </Grid>
+</Window>
